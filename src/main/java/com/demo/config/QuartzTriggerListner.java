@@ -18,7 +18,7 @@ import org.springframework.boot.logging.LogLevel;
 public class QuartzTriggerListner implements TriggerListener {
     @Override
     public String getName() {
-        return this.getName();
+        return this.getClass().getName();
     }
 
     @Override

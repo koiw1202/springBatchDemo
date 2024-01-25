@@ -4,13 +4,13 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL57Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
         use_sql_comments: true
         show_sql: true
       output:
         enabled: always
   datasource:
-    url: jdbc:mysql://localhost:3306/bookmngr
+    url: jdbc:mysql://localhost:3306/batch
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: admin

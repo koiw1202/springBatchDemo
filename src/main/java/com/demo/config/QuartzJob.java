@@ -1,5 +1,7 @@
 package com.demo.config;
 
+import com.demo.jpa.Market;
+import com.demo.jpa.MarketRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +36,10 @@ public class QuartzJob implements Job {
         dataMap.put("executeCount", ++cnt);
 
 //        Market 테이블에 pooney_현재시간 데이터를 insert 한다.
-
+        Market market = new Market() ;
+        market.setName(String.format("pooney_%s", dataMap.get("date"))) ;
+        market.setPrice(3000) ;
+        marketRepository.save(market) ;
 
     }
 }
