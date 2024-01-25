@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        use_sql_comments: true
+        show_sql: true
+      output:
+        enabled: always
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookmngr
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin
